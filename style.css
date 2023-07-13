@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:wght@100&family=VT323&display=swap");
+
+* {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Serif", serif;
+  font-family: "VT323", monospace;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0b000b;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+header {
+  height: 650px;
+  width: 1510px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+header > img {
+  height: 400px;
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px;
+}
+
+header > h1 {
+  margin: 10px;
+  background-color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 20px;
+  border-radius: 100% 50%;
+  box-shadow: 0 0 6px rgb(41, 185, 82);
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+header > h2 {
+  margin: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 6px rgb(41, 185, 82);
+  font-weight: 100;
+}
+
+main {
+  height: 600px;
+}
+
+nav {
+  background-color: yellow;
+  width: 1515px;
+  height: 75px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 25px;
+  align-items: center;
+  padding: 20px;
+  font-weight: 100;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+
+.search-box {
+  width: 500px;
+  height: 40px;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.search-button {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+article {
+  background-color: brown;
+  max-width: 1500px;
+  height: 550px;
+  margin-left: 250px;
+  border-radius: 20px;
+  align-items: center;
+}
+
+article > ul {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 1275px;
+  gap: 20px;
+}
+
+article > ul > a > p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+article > ul > a > img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+aside {
+  background-color: red;
+  width: 250px;
+  height: 550px;
+  margin-top: -550px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+aside > h1 {
+  display: flex;
+  font-weight: 200;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: yellowgreen;
+  border-radius: 20px;
+  align-content: center;
+  justify-content: center;
+}
+
+aside > ul {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  list-style: square;
+}
+
+aside > ul > li {
+  margin: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+footer {
+  background-color: grey;
+  height: 120px;
+  border-radius: 10px;
+}
+
+footer > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -10px;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 40px;
+  margin-top: 40px;
+  font-size: 24px;
+}

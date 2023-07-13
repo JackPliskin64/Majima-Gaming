@@ -6,56 +6,87 @@
   font-family: "Roboto Serif", serif;
   font-family: "VT323", monospace;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+a:hover {
+  scale: 1.1;
+}
+
+input {
+  text-align: center;
+}
+
+li:hover {
+  opacity: 0.5;
+}
+footer > div > ul:hover {
+  opacity: 0.5;
+}
+
+a {
+  color: white;
+  transition: 0.5s;
+}
+
 body {
+  overflow-x: hidden;
   background-color: #0b000b;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 header {
-  height: 650px;
+  height: 850px;
   width: 1510px;
   display: flex;
   flex-direction: column;
   align-content: center;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
 header > img {
-  height: 400px;
+  height: 650px;
   width: 100%;
   border-radius: 50px;
-  padding: 20px;
+  padding: 10px;
 }
 
 header > h1 {
   margin: 10px;
-  background-color: darkblue;
+  background-color: gray;
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
   padding: 20px;
   border-radius: 100% 50%;
-  box-shadow: 0 0 6px rgb(41, 185, 82);
-  color: black;
+  color: white;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 40px;
 }
 
+.search-button:hover {
+  background-color: grey;
+  color: whitesmoke;
+  transition: 0.5s;
+}
+
 header > h2 {
-  margin: 20px;
-  background-color: white;
+  margin: 5px;
+  background-color: rgba(128, 128, 128, 0.7);
   display: flex;
   justify-content: center;
   text-align: center;
+  width: auto;
   height: auto;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 0 6px rgb(41, 185, 82);
   font-weight: 100;
+  color: whitesmoke;
+  font-size: 22px;
 }
 
 main {
@@ -63,17 +94,20 @@ main {
 }
 
 nav {
-  background-color: yellow;
-  width: 1515px;
+  background-color: rgba(128, 128, 128, 0.5);
+  width: 1000px;
   height: 75px;
   display: flex;
   justify-content: space-evenly;
-  font-size: 25px;
+  font-size: 22px;
   align-items: center;
   padding: 20px;
   font-weight: 100;
   flex-wrap: wrap;
   border-radius: 20px;
+  margin-left: 300px;
+  margin-bottom: 10px;
+  color: whitesmoke;
 }
 
 .search-box {
@@ -90,12 +124,12 @@ nav {
 }
 
 article {
-  background-color: brown;
-  max-width: 1500px;
-  height: 550px;
-  margin-left: 250px;
+  width: 1220px;
+  height: 540px;
+  margin-left: 280px;
   border-radius: 20px;
   align-items: center;
+  background-color: rgba(128, 128, 128, 0.2);
 }
 
 article > ul {
@@ -104,7 +138,7 @@ article > ul {
   padding: 40px;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 1275px;
+  width: 1220px;
   gap: 20px;
 }
 
@@ -113,7 +147,7 @@ article > ul > a > p {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  color: black;
+  color: whitesmoke;
 }
 
 article > ul > a > img {
@@ -123,12 +157,13 @@ article > ul > a > img {
 }
 
 aside {
-  background-color: red;
+  background-color: rgba(128, 128, 128, 0.503);
   width: 250px;
-  height: 550px;
-  margin-top: -550px;
+  height: 540px;
+  margin-top: -540px;
   border-radius: 20px;
   padding: 10px;
+  margin-left: 20px;
 }
 
 aside > h1 {
@@ -136,7 +171,7 @@ aside > h1 {
   font-weight: 200;
   text-transform: uppercase;
   padding: 10px;
-  background-color: yellowgreen;
+  background-color: darkgray;
   border-radius: 20px;
   align-content: center;
   justify-content: center;
@@ -147,20 +182,22 @@ aside > ul {
   flex-direction: column;
   padding: 20px;
   align-items: center;
-  list-style: square;
+  list-style: none;
 }
 
 aside > ul > li {
   margin: 10px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  font-size: 20px;
+  font-size: 22px;
+  padding: 10px;
 }
 
 footer {
-  background-color: grey;
+  width: 1480px;
+  background-color: rgba(128, 128, 128, 0.7);
   height: 120px;
   border-radius: 10px;
+  margin: 10px;
+  margin-left: 20px;
 }
 
 footer > ul {
@@ -168,6 +205,7 @@ footer > ul {
   flex-direction: row;
   justify-content: center;
   margin-top: -10px;
+  color: whitesmoke;
 }
 
 footer > div {

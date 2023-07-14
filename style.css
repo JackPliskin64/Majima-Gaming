@@ -197,6 +197,7 @@ footer > ul {
   justify-content: center;
   margin-top: -10px;
   color: whitesmoke;
+  padding: 10px;
 }
 
 footer > div {
@@ -206,7 +207,6 @@ footer > div {
   justify-content: center;
   gap: 70px;
   padding: 40px;
-  margin-top: 40px;
   font-size: 24px;
 }
 
@@ -338,6 +338,9 @@ footer > div {
   }
   aside {
     display: none;
+  }
+  input {
+    font-size: 12px;
   }
 }
 @media (max-width: 330px) {

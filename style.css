@@ -233,6 +233,9 @@ footer > div {
       font-size: 18px;
     }
   }
+  aside > h1 {
+    font-size: 22px;
+  }
 
   .search-box {
     width: 200px;
@@ -265,6 +268,12 @@ footer > div {
     padding: 25px;
     gap: 50px;
     font-size: 20px;
+  }
+  aside > h1 {
+    font-size: 16px;
+  }
+  aside > ul {
+    font-size: 16px;
   }
 }
 @media (max-width: 550px) {
@@ -300,6 +309,9 @@ footer > div {
   .search-button {
     height: 20px;
   }
+  aside > ul {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -317,6 +329,15 @@ footer > div {
   .search-box {
     width: 100px;
     height: 20px;
+  }
+  aside > h1 {
+    font-size: 10px;
+  }
+  aside > ul {
+    font-size: 7px;
+  }
+  aside {
+    display: none;
   }
 }
 @media (max-width: 330px) {

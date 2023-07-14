@@ -371,6 +371,9 @@ footer > div {
   footer > ul {
     display: none;
   }
+  input {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 385px) {

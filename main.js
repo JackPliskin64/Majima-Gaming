@@ -1,4 +1,3 @@
-// Define los productos simulados con los campos necesarios
 const products = [
   {
     name: "Yakuza Like A Dragon! for Xbox",
@@ -7,6 +6,7 @@ const products = [
     reviews: 120,
     seller: "Amazon",
     image: "./Assets/Yakuza 7.jpg",
+    link: "https://www.amazon.es/Yakuza-Like-Dragon-Importaci%C3%B3n-alemana/dp/B088GJFLXP",
   },
   {
     name: "The Dragon of Dojima Bike Replica",
@@ -15,6 +15,7 @@ const products = [
     reviews: 85,
     seller: "Amazon",
     image: "./Assets/Bike.jpg",
+    link: "https://www.amazon.com/Numskull-Yakuza-Dragon-Collectible-Replica/dp/B0B94PXKBV",
   },
   {
     name: "The Mad DUCK of Shimano Cosplaying Duck",
@@ -23,6 +24,7 @@ const products = [
     reviews: 150,
     seller: "Sega Shop",
     image: "./Assets/Duck.jpg",
+    link: "https://www.segashop.co.uk/collections/yakuza/products/official-yakuza-majima-tubbz-cosplaying-duck-collectable",
   },
   {
     name: "Goro Majima 10-Inch PVC Figure",
@@ -31,6 +33,7 @@ const products = [
     reviews: 95,
     seller: "Estarland",
     image: "./Assets/Majima.jpg",
+    link: "https://www.estarland.com/product-description/AnimeMerchandise/Yakuza-Goro-Majima-10-Inch-PVC-Figure/55012",
   },
   {
     name: "PS3 Yakuza 3 Edition",
@@ -39,6 +42,7 @@ const products = [
     reviews: 70,
     seller: "eBay",
     image: "./Assets/Yakuza 3.jpg",
+    link: "https://www.ebay.com/itm/373990125201",
   },
   {
     name: "Dragon Phone Case",
@@ -47,6 +51,7 @@ const products = [
     reviews: 180,
     seller: "SEGA Shop",
     image: "./Assets/Phone.webp",
+    link: "https://shop.sega.com/collections/yk2",
   },
   {
     name: "Dragon Jacket",
@@ -55,6 +60,7 @@ const products = [
     reviews: 110,
     seller: "Insert Coin Clothing",
     image: "./Assets/Jacket.jpg",
+    link: "https://www.insertcoinclothing.com/outerwear/the-dragon-of-dojima.html",
   },
   {
     name: "Yakuza Notebook",
@@ -63,6 +69,7 @@ const products = [
     reviews: 200,
     seller: "Redbubble",
     image: "./Assets/Notebook.jpg",
+    link: "https://www.redbubble.com/es/i/cuaderno/Kiryu-Kazuma-Yakuza-de-Prince-of-Sand/41487082.WX3NH",
   },
   {
     name: "Kazuma Kiryu Coffee Coscup",
@@ -71,6 +78,7 @@ const products = [
     reviews: 250,
     seller: "Just Geek",
     image: "./Assets/Coffee.webp",
+    link: "https://www.justgeek.com/products/official-ryu-ga-gotoku-yakuza-kazuma-kiryu-coscups",
   },
   {
     name: "10 Years in the Joint...! T-shirt",
@@ -79,12 +87,16 @@ const products = [
     reviews: 120,
     seller: "Redbubble",
     image: "./Assets/10 years.jpg",
+    link: "https://www.redbubble.com/es/shop/yakuza",
   },
 ];
 
-// Función para crear una carta de producto y agregarla al DOM
 function createProductCard(product) {
-  const productCard = document.createElement("a");
+  const productLink = document.createElement("a");
+  productLink.href = product.link;
+  productLink.target = "_blank";
+
+  const productCard = document.createElement("div");
   productCard.classList.add("product-card");
 
   const productImage = document.createElement("img");
@@ -105,10 +117,11 @@ function createProductCard(product) {
   productCard.appendChild(productPrice);
   productCard.appendChild(sellerInfo);
 
-  return productCard;
+  productLink.appendChild(productCard);
+
+  return productLink;
 }
 
-// Función para mostrar los productos en la página
 function displayProducts() {
   const productContainer = document.querySelector(".product-container");
   products.forEach((product) => {
@@ -117,5 +130,4 @@ function displayProducts() {
   });
 }
 
-// Llama a la función para mostrar los productos cuando se cargue el contenido
 document.addEventListener("DOMContentLoaded", displayProducts);

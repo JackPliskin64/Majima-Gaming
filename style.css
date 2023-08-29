@@ -149,7 +149,7 @@ body > main > div {
   text-overflow: ellipsis;
 }
 
-article > ul > div > a > img {
+article > ul > div > a > div > img {
   height: 200px;
   width: 200px;
   border-radius: 10px;

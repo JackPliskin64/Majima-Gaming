@@ -118,7 +118,7 @@ article {
   background-color: rgba(128, 128, 128, 0.2);
 }
 
-article > ul {
+article > ul > div {
   display: flex;
   flex-direction: row;
   padding: 40px;
@@ -142,7 +142,7 @@ body > main > div {
   gap: 10px;
 }
 
-article > ul > a > img {
+article > ul > div > a > img {
   height: 200px;
   width: 200px;
   border-radius: 10px;

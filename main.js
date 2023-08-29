@@ -21,7 +21,7 @@ const products = [
 
 // Función para crear una carta de producto y agregarla al DOM
 function createProductCard(product) {
-  const productCard = document.createElement("div");
+  const productCard = document.createElement("a");
   productCard.classList.add("product-card");
 
   const productImage = document.createElement("img");

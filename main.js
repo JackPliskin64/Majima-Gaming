@@ -22,7 +22,7 @@ const products = [
     price: 19.99,
     stars: 4.7,
     reviews: 150,
-    seller: "Sega Shop",
+    seller: "SEGA Shop",
     image: "./Assets/Duck.jpg",
     link: "https://www.segashop.co.uk/collections/yakuza/products/official-yakuza-majima-tubbz-cosplaying-duck-collectable",
   },
@@ -122,12 +122,57 @@ function createProductCard(product) {
   return productLink;
 }
 
-function displayProducts() {
+function displayProducts(items) {
   const productContainer = document.querySelector(".product-container");
-  products.forEach((product) => {
-    const productCard = createProductCard(product);
-    productContainer.appendChild(productCard);
+  while (productContainer.firstChild) {
+    productContainer.removeChild(productContainer.firstChild);
+  }
+  if (items == null) {
+    products.forEach((product) => {
+      const productCard = createProductCard(product);
+      productContainer.appendChild(productCard);
+    });
+  } else {
+    items.forEach((product) => {
+      const productCard = createProductCard(product);
+      productContainer.appendChild(productCard);
+    });
+  }
+}
+
+function filter(event) {
+  event.preventDefault();
+  const selectedCategory = event.target.getAttribute("data-category");
+  const categories = document.querySelectorAll("aside ul li a");
+
+  const selectedSellers = Array.from(categories).map((category) =>
+    category.getAttribute("data-category"));
+
+  const filteredItems = [];
+  if (selectedCategory == "all") {
+    displayProducts(null);
+  } else {
+    for (let product of products) {
+      if (selectedCategory === "Others") {
+        if (!selectedSellers.includes(product.seller)) {
+          filteredItems.push(product);
+        }
+      } else if (product.seller === selectedCategory) {
+        filteredItems.push(product);
+      }
+    }
+    displayProducts(filteredItems);
+  }
+}
+
+
+function createFilterOptions() {
+  const categoryLinks = document.querySelectorAll("aside ul li a");
+  categoryLinks.forEach((link) => {
+    link.addEventListener("click", filter);
   });
 }
 
-document.addEventListener("DOMContentLoaded", displayProducts);
+
+document.addEventListener("DOMContentLoaded", displayProducts(null), createFilterOptions());
+

@@ -27,13 +27,17 @@
         <h1>Filter by</h1>
         <ul>
           <li><a data-category="all">All Categories</a></li>
-          <ul>Sellers:
+          <ul id="seller">Sellers:
             <li><a data-category="Amazon">Amazon</a></li>
             <li><a data-category="eBay">Ebay</a></li>
             <li><a data-category="SEGA Shop">Sega Shop</a></li>
             <li><a data-category="Others">Others</a></li>
           </ul>
-          <li><a href="#" data-category="Programs">Price</a></li>
+          <ul id="price">Price(max):</ul>
+          <input id="numberInput" type="number" placeholder="price"> <button id="applyPriceFilter">Submit</button>
+
+          <li>
+          </li>
           <!-- Agrega enlaces para otras categorías aquí -->
         </ul>
       </aside>

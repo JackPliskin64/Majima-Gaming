@@ -10,6 +10,19 @@
   box-sizing: border-box;
 }
 
+#seller {
+  margin-bottom: 20px;
+}
+
+#numberInput {
+  width: 50px;
+  margin-bottom: 5px;
+}
+
+ul {
+  color: whitesmoke;
+}
+
 a:hover {
   scale: 1.1;
 }

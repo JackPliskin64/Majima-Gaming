@@ -91,6 +91,9 @@ const products = [
   },
 ];
 
+const numberInput = document.getElementById("numberInput");
+const applyPriceFilterButton = document.getElementById("applyPriceFilter");
+
 function createProductCard(product) {
   const productLink = document.createElement("a");
   productLink.href = product.link;
@@ -165,7 +168,6 @@ function filter(event) {
   }
 }
 
-
 function createFilterOptions() {
   const categoryLinks = document.querySelectorAll("aside ul li a");
   categoryLinks.forEach((link) => {
@@ -173,6 +175,16 @@ function createFilterOptions() {
   });
 }
 
+function applyPriceFilter() {
+  const maxPrice = parseFloat(numberInput.value);
+  const filteredItems = products.filter((product) => {
+    return product.price <= maxPrice;
+  });
 
+  displayProducts(filteredItems);
+}
+
+applyPriceFilterButton.addEventListener("click", applyPriceFilter);
 document.addEventListener("DOMContentLoaded", displayProducts(null), createFilterOptions());
+
 
